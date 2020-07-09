@@ -30,6 +30,7 @@ openapi-codec==1.3.2
 packaging==20.4
 pep8-naming==0.10.0
 prospector==1.3.0
+psycopg2==2.8.5
 pycodestyle==2.6.0
 pydocstyle==5.0.2
 pyflakes==2.2.0
