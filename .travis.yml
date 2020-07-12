@@ -4,9 +4,22 @@ python:
 
 stages:
   - name: test
+  - name: deploy
 
 jobs:
-  - stage: test
-    name: Unit Tests
-    script: python manage.py test
+    include:
+    - stage: test
+      name: Unit Tests
+      script: python manage.py test
+    - stage:
+      name: Deploy Heroku
+      script: /bin/true
+      deploy:
+        provider: heroku 
+        api_key:
+          secure: bec3ca26-0264-4351-bdcf-091447052e32
+        app: rafael-ecomm
+        on: master
+        run: "python manage.py migrate"
+
   
