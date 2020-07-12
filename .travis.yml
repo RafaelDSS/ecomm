@@ -1,25 +1,21 @@
 language: python
 python:
-  - "3.8.3"
-
+- 3.8.3
 stages:
-  - name: test
-  - name: deploy
-
+- name: test
+- name: deploy
 jobs:
-    include:
-    - stage: test
-      name: Unit Tests
-      script: python manage.py test
-    - stage: deploy
-      name: Deploy Heroku
-      script: /bin/true
-      deploy:
-        provider: heroku 
-        api_key:
-          secure: bec3ca26-0264-4351-bdcf-091447052e32
-        app: rafael-ecomm
-        on: master
-        run: "python manage.py migrate"
-
-  
+  include:
+  - stage: test
+    name: Unit Tests
+    script: python manage.py test
+  - stage: deploy
+    name: Deploy Heroku
+    script: "/bin/true"
+    deploy:
+      provider: heroku
+      api_key:
+        secure: D/gQrBbtEJrjt0s+NaoSehbEtnMl8HT9NL5JYEKpXX0Wf526chAfiWfwZmTfMLO7vVThPE0hMgTmnRLFOuh/AGdzeeFaMKAYq3L8+BTKSKTT8ZTtpOBYplIQLn/8ULrjNQ0v4GIMAcVoEQ5Rwh97Z+i2xNofB+/aoZF5t8q4tQx1zaBCpgOGbm1OW+pA+GLGUdIYAFW77I6mX+6uJPxpsDLMrStCzc004Of61zaoNSj90VxDKysVz7lTSODZiPJSZr7nFcLujE2U99YgXdCsK6TKJupgF0hqxuyvS0qAB2Gz9rMve0vr7we6UTteqXA2q5GqM0G9k/F7OehRCJ81MoE3phmrNFz7m/NS5/FEMr+CUemHJkaAeIVtQeXyWk+BIFqSIPXD4hdDiGMUzDrvTBtngbza41YsTdTwJ/tgKu/Yt2eMV58UaofIHljUZ4lzd9vYqi+OlCybifKa61ImRu9RbMvHOlpOsLVDQUx5Ub9mfEvRcHZM+4cpihGwDv783kO9wIMGyAgT8C6CtKitBg4O5dlqj43vJiPpITTcGPoIiEQRloFsmdOM/FycspoLE8x8taaFDEf2NhvP8mC+fKQh8V1J0gIo68v8tYJi5lrix5r7kb0zWP2CdAF2im1FrhNXDEnHMofaFmXOqNbRD0b/uROQi8TIAruoMoZlzrw=
+      app: rafael-ecomm
+      on: master
+      run: python manage.py migrate
