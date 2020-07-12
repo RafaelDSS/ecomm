@@ -6,6 +6,8 @@ from .models import Product, Category
 
 class ProductStrTestCase(TestCase):
     def test_str_should_return_name(self):
+        expect = "Product test"
+
         category = Category.objects.create(
             name="Category test", description="Description test")
         product = Product.objects.create(
@@ -13,5 +15,4 @@ class ProductStrTestCase(TestCase):
         )
         result = Product.objects.filter(category=category.id).first()
 
-        expect = "Product test"
         assert str(result) == expect
