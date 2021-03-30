@@ -35,7 +35,7 @@ psycopg2==2.8.5
 pycodestyle==2.6.0
 pydocstyle==5.0.2
 pyflakes==2.2.0
-Pygments==2.6.1
+Pygments==2.7.4
 pylint==2.5.2
 pylint-celery==0.3
 pylint-django==2.0.15
