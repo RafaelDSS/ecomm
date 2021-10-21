@@ -1,2 +1,2 @@
 *.py linguist-detectable=true
-products/static/js/* linguist-detectable=false
+*.js linguist-detectable=false
