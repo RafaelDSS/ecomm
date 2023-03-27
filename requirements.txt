@@ -44,7 +44,7 @@ pylint-plugin-utils==0.6
 pyparsing==2.4.7
 pytz==2020.1
 PyYAML==5.4
-redis==3.5.3
+redis==4.5.3
 requests==2.23.0
 requirements-detector==0.7
 ruamel.yaml==0.16.10
